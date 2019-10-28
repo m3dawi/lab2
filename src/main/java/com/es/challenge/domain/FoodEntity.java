@@ -18,4 +18,12 @@ public class FoodEntity{
 	
 	private String name;
 	private Integer calories;
+
+	@Override
+	public String toString() {
+		if (this !=null && name !=null) {
+			return name;
+		}
+		return "";
+	}
 }

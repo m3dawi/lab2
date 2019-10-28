@@ -14,4 +14,8 @@ public class UserCalorieTrackingResponse {
 	public void addUserCalorieDailyEntry(UserCalorieDailyEntry entry) {
 		this.userCalorieDailyTracking.add(entry);
 	}
+
+	public Object getUserCalorieDailyTracking() {
+		return null;
+	}
 }

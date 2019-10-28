@@ -8,9 +8,17 @@ import lombok.experimental.Accessors;
 @Data
 @Accessors(chain=true)
 @NoArgsConstructor
-@AllArgsConstructor
 public class UserCalorieDetailEntry {
 	private Long foodId;
     private String name;
     private Long calories;
+
+    public UserCalorieDetailEntry(Long foodId, String foodName, Long calories) {
+    }
+
+
+
+
 }
+
+

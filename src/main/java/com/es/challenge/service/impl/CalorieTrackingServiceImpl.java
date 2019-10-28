@@ -73,14 +73,15 @@ public class CalorieTrackingServiceImpl implements CalorieTrackingService {
 		Map<Date, List<UserHistoryEntry>> mapTracking = userHistoryList.stream().collect(Collectors.groupingBy(u -> u.getDate()));
 		mapTracking.forEach((k,v) -> {
 			UserCalorieDailyEntry userCalorieDailyEntry = new UserCalorieDailyEntry();
-			userCalorieDailyEntry.setDate(CalorieTrackingUtils.dateToString(k))
-								.setTotal(v.stream().mapToLong(ude -> ude.getCalories()).sum());
+			userCalorieDailyEntry.setDate(CalorieTrackingUtils.dateToString(k));
+			userCalorieDailyEntry.setTotal(v.stream().mapToLong(ude -> ude.getCalories()).sum());
 			
 			// collect History Detail entries
-			userCalorieDailyEntry.setUserDailyEntries(v.stream().map( detailEntry -> 
-																		new UserCalorieDetailEntry(detailEntry.getFoodId(), 
-																									detailEntry.getFoodName(),
-																									detailEntry.getCalories()))
+			userCalorieDailyEntry.setUserDailyEntries(v.stream().map( detailEntry -> {
+				return new UserCalorieDetailEntry(detailEntry.getFoodId(),
+						detailEntry.getFoodName(),
+						detailEntry.getCalories());
+			})
 																.collect(Collectors.toList()));
 			// collect all Tracking for all days			
 			response.addUserCalorieDailyEntry(userCalorieDailyEntry);

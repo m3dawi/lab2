@@ -1,9 +1,9 @@
 package com.es.challenge.service;
 
-import java.util.List;
-
+import com.es.challenge.domain.Food;
 import org.springframework.stereotype.Service;
-import com.es.challenge.domain.*;
+
+import java.util.List;
 
 @Service
 public interface FoodManagementService {

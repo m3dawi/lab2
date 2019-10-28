@@ -19,4 +19,7 @@ public interface FoodRepository extends JpaRepository<FoodEntity, Long>{
 	@Query("SELECT food FROM FoodEntity food WHERE food.calories BETWEEN :min AND :max")
 	List<FoodEntity> searchFoodByRange(@Param("min") int min, @Param("max") int max);
 
+	List<FoodEntity> findByName(String name);
+
+    List<FoodEntity> findByNameIn(List<String> food);
 }

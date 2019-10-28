@@ -35,4 +35,52 @@ public class UserHistoryEntry {
 	
 	@Column(name="calories")
 	private Long calories;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public Long getUserId() {
+		return userId;
+	}
+
+	public void setUserId(Long userId) {
+		this.userId = userId;
+	}
+
+	public Long getFoodId() {
+		return foodId;
+	}
+
+	public void setFoodId(Long foodId) {
+		this.foodId = foodId;
+	}
+
+	public String getFoodName() {
+		return foodName;
+	}
+
+	public void setFoodName(String foodName) {
+		this.foodName = foodName;
+	}
+
+	public Date getDate() {
+		return date;
+	}
+
+	public void setDate(Date date) {
+		this.date = date;
+	}
+
+	public Long getCalories() {
+		return calories;
+	}
+
+	public void setCalories(Long calories) {
+		this.calories = calories;
+	}
 }

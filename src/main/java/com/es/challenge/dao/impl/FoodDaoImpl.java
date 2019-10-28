@@ -41,4 +41,9 @@ public class FoodDaoImpl implements FoodDao {
 			return false;
 		}
 	}
+
+	@Override
+	public List<FoodEntity> getFoodByName(List<String> food) {
+		return this.foodRepository.findByNameIn(food);
+	}
 }

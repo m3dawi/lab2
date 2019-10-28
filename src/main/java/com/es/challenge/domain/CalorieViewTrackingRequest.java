@@ -10,4 +10,20 @@ public class CalorieViewTrackingRequest {
 	private Long userId;
 
 	private String date;	// format as MMddyyyy
+
+    public Long getUserId() {
+    	return userId;
+    }
+
+	public String getDate() {
+    	return date;
+	}
+
+	public void setUserId(Long userId) {
+		this.userId = userId;
+	}
+
+	public void setDate(String date) {
+		this.date = date;
+	}
 }

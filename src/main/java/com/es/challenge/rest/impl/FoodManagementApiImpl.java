@@ -38,13 +38,13 @@ public class FoodManagementApiImpl implements FoodManagementApi {
 	}
 
 	@Override
-	public ResponseEntity addFood(@RequestHeader(name="Consumer-Key", required=false) String key, @RequestBody Food food) {
+	public ResponseEntity addFood(@RequestHeader(name="Consumer-Key", required=true) String key, @RequestBody Food food) {
 		if (this.esAuthService.isAdmin(key)) {
 			Boolean result = this.foodManagementService.addFood(food);
-			return new ResponseEntity(result, HttpStatus.CREATED);
+			return new ResponseEntity(result, HttpStatus.OK);
 		}
 		else {
-			return new ResponseEntity(new Response("Invalid Consmer Key"), HttpStatus.UNAUTHORIZED);
+			return new ResponseEntity("Invalid Consmer Key", HttpStatus.UNAUTHORIZED);
 		}
 	}
 
@@ -55,7 +55,7 @@ public class FoodManagementApiImpl implements FoodManagementApi {
 			return new ResponseEntity(result, (result) ? HttpStatus.NO_CONTENT : HttpStatus.NOT_FOUND);
 		}
 		else {
-			return new ResponseEntity(new Response("Invalid Consmer Key"), HttpStatus.UNAUTHORIZED);
+			return new ResponseEntity("Invalid Consmer Key", HttpStatus.UNAUTHORIZED);
 		}
 	}
 }

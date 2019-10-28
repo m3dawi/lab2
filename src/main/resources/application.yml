@@ -3,7 +3,7 @@
 ##################
 server:
   context-path: /calTracking
-  
+  port: 8080
 ########################
 #   Database Settings
 ########################

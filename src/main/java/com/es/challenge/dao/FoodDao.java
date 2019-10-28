@@ -12,4 +12,6 @@ public interface FoodDao {
 	List<FoodEntity> getFoods(Integer caloriesMin, Integer caloriesMax);
 	Boolean addFood(FoodEntity food);
 	Boolean removeFood(Long foodId);
+
+	List<FoodEntity> getFoodByName(List<String> food);
 }

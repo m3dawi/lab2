@@ -1,0 +1,18 @@
+<application>
+  <component name="JavaRebelPlugin">
+    <option name="ideInstallationStorage">
+      <map>
+        <entry key="com.zeroturnaround.jrebel.FormatVersion" value="7.0.0" />
+        <entry key="com.zeroturnaround.jrebel.NoExternalAutoconvert" value="true" />
+        <entry key="com.zeroturnaround.jrebel.ide.RemoteServerIdCounter" value="1" />
+        <entry key="com.zeroturnaround.jrebel.ide.RemoteServers" value="{&quot;RemoteServers&quot;:[{&quot;syncEnabled&quot;:&quot;true&quot;,&quot;serverAuthenticationPassword&quot;:&quot;&quot;,&quot;httpBasicAuthenticationUser&quot;:&quot;&quot;,&quot;httpBasicAuthenticationPassword&quot;:&quot;&quot;,&quot;name&quot;:&quot;jojo&quot;,&quot;useServerAuthentication&quot;:&quot;false&quot;,&quot;deleteFilesOnServer&quot;:&quot;true&quot;,&quot;id&quot;:&quot;1&quot;,&quot;useHttpBasicAuthentication&quot;:&quot;false&quot;,&quot;url&quot;:&quot;http:\/\/illinqw038:20100&quot;}]}" />
+        <entry key="com.zeroturnaround.jrebel.intellij.autocompile.enabled" value="true" />
+        <entry key="com.zeroturnaround.jrebel.intellij.autocompile.feature-seen" value="true" />
+        <entry key="com.zeroturnaround.jrebel.intellij.autosave.enabled" value="true" />
+        <entry key="com.zeroturnaround.jrebel.intellij.plugin.old-agent-version" value="2019.2.0" />
+        <entry key="com.zeroturnaround.jrebel.remoting.SyncOnBuild" value="true" />
+      </map>
+    </option>
+    <option name="settingsStartupRadioSelection" value="2" />
+  </component>
+</application>

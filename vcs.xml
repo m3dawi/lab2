@@ -26,9 +26,13 @@
           <option name="url" value="https://github.com/m3dawi/lab2.git" />
           <option name="userName" value="" />
         </UrlAndUserName>
+        <UrlAndUserName>
+          <option name="url" value="https://github.com/spring-cloud-samples/feign-eureka.git" />
+          <option name="userName" value="" />
+        </UrlAndUserName>
       </list>
     </option>
-    <option name="cloneParentDir" value="C:\Users\madawi\Downloads\test" />
+    <option name="cloneParentDir" value="C:\Users\madawi\Downloads" />
   </component>
   <component name="Vcs.Log.App.Settings">
     <option name="COLUMN_ORDER">

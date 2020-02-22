@@ -1,10 +1,6 @@
 package com.es.challenge.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 import lombok.Data;
 
@@ -18,6 +14,11 @@ public class FoodEntity{
 	
 	private String name;
 	private Integer calories;
+	@Column(name="img", columnDefinition="CLOB NOT NULL")
+	@Lob
+	private String img;
+
+	private 	double price;
 
 	@Override
 	public String toString() {

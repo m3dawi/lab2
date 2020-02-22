@@ -15,4 +15,7 @@ public class Food implements Serializable{
 	private Long id;
 	private String name;
 	private Long calories;
+	private String img;
+	double price;
+
 }

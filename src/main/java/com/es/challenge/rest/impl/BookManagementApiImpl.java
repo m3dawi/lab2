@@ -17,12 +17,15 @@ import java.util.List;
 @Component
 public class BookManagementApiImpl implements BookManagementApi {
 
-	@Autowired
 	private com.es.challenge.service.BookManagementService BookManagementService;
-	
-	@Autowired
 	private ESAuthService esAuthService;
-	
+
+	@Autowired
+	public BookManagementApiImpl(BookManagementService bookManagementService,ESAuthService esAuthService){
+		this.BookManagementService=bookManagementService;
+		this.esAuthService=esAuthService;
+	}
+
 	@Override
 	public ResponseEntity getBooks() {
 		List<Book> Books = this.BookManagementService.getBooks();
@@ -51,7 +54,7 @@ public class BookManagementApiImpl implements BookManagementApi {
 	public ResponseEntity removeBook(@RequestHeader(name="Consumer-Key", required=false) String key, @PathVariable("id") Long BookId) {
 		if (this.esAuthService.isAdmin(key)) {
 			Boolean result = this.BookManagementService.removeBook(BookId);
-			return new ResponseEntity(result, (result) ? HttpStatus.NO_CONTENT : HttpStatus.NOT_FOUND);
+			return new ResponseEntity(result, (result) ? HttpStatus.OK : HttpStatus.NOT_FOUND);
 		}
 		else {
 			return new ResponseEntity("Invalid Consmer Key", HttpStatus.UNAUTHORIZED);

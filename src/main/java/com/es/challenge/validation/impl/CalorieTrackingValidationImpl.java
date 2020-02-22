@@ -1,6 +1,5 @@
 package com.es.challenge.validation.impl;
 
-import org.apache.logging.log4j.util.Strings;
 import org.springframework.stereotype.Component;
 
 import com.es.challenge.CalorieTrackingConstant;
@@ -16,9 +15,7 @@ public class CalorieTrackingValidationImpl implements CalorieTrackingValidation,
 	public boolean isValidCalorieTrackingRequest(CalorieViewTrackingRequest request) {
 		try {
 			String date = request.getDate();
-			if (!Strings.isEmpty(date)) {
-				formatter.parse(date);
-			}
+			formatter.parse(date);
 			return true;
 		}
 		catch (Exception e) {

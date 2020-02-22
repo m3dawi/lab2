@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 @RestController
+@CrossOrigin
 public interface BookManagementApi {
 	@GetMapping(value = "/public/getBooks", produces= {MediaType.APPLICATION_JSON_VALUE})
 	@ApiOperation(value="Return all Books with details", notes="This is a public API", response=List.class)

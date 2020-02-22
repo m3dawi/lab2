@@ -5,7 +5,6 @@ import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import org.apache.logging.log4j.util.Strings;
 import org.dozer.DozerBeanMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -63,7 +62,6 @@ public class CalorieTrackingUtils implements CalorieTrackingConstant {
 	 * @return
 	 */
 	public static Date toDate(String date) {
-		if (Strings.isEmpty(date)) return null;
 		try {
 			return formatter.parse(date);
 		}

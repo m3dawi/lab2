@@ -6,11 +6,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.es.challenge.domain.CalorieTrackingRequest;
 import com.es.challenge.domain.CalorieViewTrackingRequest;
@@ -19,6 +15,7 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 
 @RestController
+@CrossOrigin
 public interface CalorieTrackingApi {
 
 	@PostMapping(value = "/public/trackCalorie", 

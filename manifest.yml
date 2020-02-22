@@ -1,0 +1,6 @@
+applications:
+  - name: BooksFoods
+    host: BooksFoods
+    memory: 1G
+    path: target/calorie-tracking-0.0.1-SNAPSHOT.jar
+    instances: 1
